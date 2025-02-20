@@ -1,0 +1,54 @@
+{
+  "name": "@cakeauth/frontend",
+  "version": "0.1.4",
+  "description": "CakeAuth JavaScript Frontend SDK",
+  "type": "module",
+  "types": "dist/esm/types/index.d.ts",
+  "module": "dist/esm/src/index.js",
+  "main": "dist/cjs/src/index.cjs",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/types/index.d.ts",
+      "import": "./dist/esm/src/index.js",
+      "require": "./dist/cjs/src/index.cjs"
+    },
+    "./types": {
+      "types": "./dist/esm/types/api/types.d.ts"
+    }
+  },
+  "scripts": {
+    "build:esm": "rollup -c rollup.config.js",
+    "build:cjs": "rollup -c rollup.config.cjs.js",
+    "build": "npm run build:esm && npm run build:cjs",
+    "clean": "rm -rf node_modules dist .turbo",
+    "test": "vitest run test/unit/* --coverage"
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "cakeauth"
+  ],
+  "author": "CakeAuth",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@vitest/coverage-v8": "^2.1.8",
+    "rollup": "^4.34.8",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "standard-version": "^9.5.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "fetch-retry": "^6.0.0",
+    "zod": "^3.24.1"
+  }
+}

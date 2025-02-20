@@ -1,0 +1,9 @@
+.github
+.DS_Store
+examples/
+node_modules/
+tests/
+test/
+coverage/
+.turbo/
+tsconfig.tsbuildinfo

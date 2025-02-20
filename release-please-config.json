@@ -1,0 +1,31 @@
+{
+  "separate-pull-requests": true,
+  "always-update": true,
+  "prerelease-type": "beta",
+  "packages": {
+    "packages/backend": {
+      "path": "packages/backend",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "pull-request-title-pattern": "chore(backend): release package${component}@${version}"
+    },
+    "packages/frontend": {
+      "path": "packages/frontend",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "pull-request-title-pattern": "chore(frontend): release package${component}@${version}"
+    },
+    "packages/react": {
+      "path": "packages/react",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "pull-request-title-pattern": "chore(react): release package${component}@${version}"
+    },
+    "packages/nextjs-app": {
+      "path": "packages/nextjs-app",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "pull-request-title-pattern": "chore(nextjs): release package${component}@${version}"
+    }
+  }
+}

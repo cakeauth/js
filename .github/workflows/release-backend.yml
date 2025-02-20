@@ -1,0 +1,23 @@
+name: Release @cakeauth/backend
+
+on:
+  push:
+    tags:
+      - backend-v*
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build --filter=@cakeauth/backend
+      - run: pnpm publish --access public --filter "./packages/backend/**"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}

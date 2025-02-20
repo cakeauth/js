@@ -1,0 +1,49 @@
+{
+  "name": "@cakeauth/nextjs-app",
+  "version": "0.1.4",
+  "description": "CakeAuth Next.JS SDK",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "release": "npm run build && standard-version && git push --follow-tags && npm publish",
+    "clean": "rm -rf .turbo node_modules dist examples/base/node_modules/ examples/base/false/ examples/base/.next/"
+  },
+  "peerDependencies": {
+    "next": "^14",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "dependencies": {
+    "@cakeauth/backend": "workspace:*",
+    "@cakeauth/react": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^18",
+    "standard-version": "^9.5.0",
+    "tsup": "^8",
+    "typescript": "^5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cakeauth/js"
+  },
+  "keywords": [
+    "cakeauth"
+  ],
+  "author": "CakeAuth",
+  "license": "MIT"
+}
