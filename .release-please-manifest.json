@@ -1,6 +1,6 @@
 {
-  "packages/backend": "0.1.4",
-  "packages/frontend": "0.1.4",
+  "packages/backend": "0.2.0",
+  "packages/frontend": "0.2.0",
   "packages/nextjs-app": "0.2.0",
-  "packages/react": "0.1.4"
+  "packages/react": "0.2.0"
 }
