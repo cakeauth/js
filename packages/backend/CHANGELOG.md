@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/cakeauth/js/compare/backend-v0.1.4...backend-v0.2.0) (2025-02-20)
+
+
+### Features
+
+* init open-source ([ae84aa6](https://github.com/cakeauth/js/commit/ae84aa66a472ac980722c974ef2e91c055edfc05))
+
 ## [0.1.3](https://github.com/cakeauth/js/compare/backend-v0.1.3...backend-v0.1.3) (2025-02-20)
 
 ### Features
