@@ -1,6 +1,6 @@
 {
   "name": "@cakeauth/frontend",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "CakeAuth JavaScript Frontend SDK",
   "type": "module",
   "types": "dist/esm/types/index.d.ts",
