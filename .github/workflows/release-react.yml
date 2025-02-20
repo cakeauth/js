@@ -18,6 +18,6 @@ jobs:
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
       - run: pnpm build --filter=@cakeauth/react
-      - run: pnpm publish --access public --filter "./packages/react/**"
+      - run: pnpm publish --access public --filter "./packages/react/**" --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
